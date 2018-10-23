@@ -27,6 +27,10 @@ public class ChromeTest {
 
         searchField.sendKeys(Keys.ESCAPE);
 
+        WebElement checkOrderBy = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"schema-filter\"]/div[1]/div[2]/div/label/span[1]/span");
+        checkOrderBy.click();
+        Assert.assertTrue("//*[@id=\"schema-tags\"]/div/span", true);
+
 //        WebElement searchFieldClose = ((ChromeDriver) driverChrome).findElementByXPath("//div[@class='search__bar']/span[@class='search__close']");
 //        searchFieldClose.click();
 

@@ -24,7 +24,7 @@ public class InternetExplorerTest {
         WebElement searchField = ((InternetExplorerDriver) driverInternetExplorer).findElementByClassName("fast-search__input");
         searchField.sendKeys("asus vivobook pro 15");
 
-       // driverInternetExplorer.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // driverInternetExplorer.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         searchField.sendKeys(Keys.ESCAPE);
 
