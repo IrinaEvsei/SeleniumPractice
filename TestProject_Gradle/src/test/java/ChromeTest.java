@@ -1,21 +1,24 @@
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeTest {
 
-    public static void main(String[] args){
+    @Test
+    public void main() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/irina.evsei/IdeaProjects/TestProject_Gradle/src/test/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
         String PATH = "https://www.onliner.by/";
 
         WebDriver driverChrome = new ChromeDriver();
         driverChrome.manage().window().maximize();
         driverChrome.get(PATH);
 
-        WebElement laptop = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a");
+        Thread.sleep(2000);
+
+        WebElement laptop = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a/span/span");
         laptop.click();
 
         WebElement laptopPageTitle = ((ChromeDriver) driverChrome).findElementByClassName("schema-header__title");
@@ -25,18 +28,10 @@ public class ChromeTest {
         WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
         searchField.sendKeys("asus vivobook pro 15");
 
-        searchField.sendKeys(Keys.ESCAPE);
-
-        WebElement checkOrderBy = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"schema-filter\"]/div[1]/div[2]/div/label/span[1]/span");
-        checkOrderBy.click();
-        Assert.assertTrue("//*[@id=\"schema-tags\"]/div/span", true);
-
-//        WebElement searchFieldClose = ((ChromeDriver) driverChrome).findElementByXPath("//div[@class='search__bar']/span[@class='search__close']");
-//        searchFieldClose.click();
-
+        Thread.sleep(2000);
 
         System.out.println("Google Chrome Driver is work.");
-//        driverChrome.close();
-//        driverChrome.quit();
+        driverChrome.close();
+        driverChrome.quit();
     }
 }

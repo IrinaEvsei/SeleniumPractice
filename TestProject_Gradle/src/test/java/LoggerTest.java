@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class LoggerTest {
 
-    static String CONFIG_FILE = "C:/Users/irina.evsei/IdeaProjects/TestProject_Gradle/src/test/resources/log4j.properties";
+    static String CONFIG_FILE = "src\\test\\resources\\log4j.properties";
 
     public static final Logger logger = Logger.getLogger(LoggerTest.class.getName());
 

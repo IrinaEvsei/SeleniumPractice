@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,8 +8,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class MicrosoftEdgeTest {
-    public static void main(String[] args) {
-        System.setProperty("webdriver.edge.driver", "C:/Users/irina.evsei/IdeaProjects/TestProject_Gradle/src/test/resources/MicrosoftWebDriver.exe");
+    @Test
+    public void microsoftEdgeTest() throws InterruptedException {
+        System.setProperty("webdriver.edge.driver", "src\\test\\resources\\MicrosoftWebDriver.exe");
         String PATH = "https://www.onliner.by/";
 
         WebDriver driverMicrosoftEdge = new EdgeDriver();
@@ -18,6 +20,7 @@ public class MicrosoftEdgeTest {
         WebElement laptop = ((EdgeDriver) driverMicrosoftEdge).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a");
         laptop.click();
 
+        Thread.sleep(3000);
         WebElement laptopPageTitle = ((EdgeDriver) driverMicrosoftEdge).findElementByClassName("schema-header__title");
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
 
@@ -28,12 +31,8 @@ public class MicrosoftEdgeTest {
 
         searchField.sendKeys(Keys.ESCAPE);
 
-//        WebElement searchFieldClose = ((ChromeDriver) driverChrome).findElementByXPath("//div[@class='search__bar']/span[@class='search__close']");
-//        searchFieldClose.click();
-
-
         System.out.println("It's work.");
-//        driverChrome.close();
-//        driverChrome.quit();
+        driverMicrosoftEdge.close();
+        driverMicrosoftEdge.quit();
     }
 }
