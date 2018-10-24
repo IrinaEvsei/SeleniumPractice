@@ -14,20 +14,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BrowserManager {
-    private static BrowserManager browserManager = new BrowserManager();
     private static WebDriver webDriver;
     private Properties properties;
-
-
-    public static BrowserManager getBrowserManager() {
-        return browserManager;
-    }
 
     public static WebDriver getWebDriver() {
         return webDriver;
     }
 
-    private BrowserManager(){
+    public BrowserManager(){
         properties = getProperties();
         switch(properties.getProperty("browser")){
             case "Chrome":

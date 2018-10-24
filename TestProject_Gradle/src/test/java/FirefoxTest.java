@@ -18,7 +18,7 @@ public class FirefoxTest {
 
         Thread.sleep(2000);
 
-        WebElement laptop = ((FirefoxDriver) driverFirefox).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a");
+        WebElement laptop = ((FirefoxDriver) driverFirefox).findElementByXPath("//span[@class='project-navigation__text']//span[contains(.,'Ноутбуки')]");
         laptop.click();
 
         WebElement laptopPageTitle = ((FirefoxDriver) driverFirefox).findElementByClassName("schema-header__title");

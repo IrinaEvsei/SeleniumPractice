@@ -16,7 +16,7 @@ public class InternetExplorerTest {
         driverInternetExplorer.get(PATH);
 
         Thread.sleep(7000);
-        WebElement laptop = ((InternetExplorerDriver) driverInternetExplorer).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a/span/span");
+        WebElement laptop = ((InternetExplorerDriver) driverInternetExplorer).findElementByXPath("//span[@class='project-navigation__text']//span[contains(.,'Ноутбуки')]");
         laptop.click();
 
         WebElement laptopPageTitle = ((InternetExplorerDriver) driverInternetExplorer).findElementByClassName("schema-header__title");

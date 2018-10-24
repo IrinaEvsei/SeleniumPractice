@@ -18,15 +18,18 @@ public class ChromeTest {
 
         Thread.sleep(2000);
 
-        WebElement laptop = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a/span/span");
+        WebElement laptop = ((ChromeDriver) driverChrome).findElementByXPath("//span[@class='project-navigation__text']//span[contains(.,'Ноутбуки')]");
         laptop.click();
 
-        WebElement laptopPageTitle = ((ChromeDriver) driverChrome).findElementByClassName("schema-header__title");
+        WebElement laptopPageTitle = ((ChromeDriver) driverChrome).findElementByXPath("//h1[@class='schema-header__title']");
+        //WebElement laptopPageTitle = (WebElement) ((ChromeDriver) driverChrome).findElementsByXPath("//h1[@class='schema-header__title']");
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
 
+//        WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
+//        searchField.sendKeys("asus vivobook pro 15");
 
-        WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
-        searchField.sendKeys("asus vivobook pro 15");
+        WebElement inputMinPrice = ((ChromeDriver) driverChrome).findElementByXPath("//input(contains[@data-bind, 'value:facet.value.from'])");
+        inputMinPrice.sendKeys("1");
 
         Thread.sleep(2000);
 
