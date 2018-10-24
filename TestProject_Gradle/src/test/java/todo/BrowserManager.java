@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class BrowserManager {
     private static WebDriver webDriver;
     public String input;
+
     public static WebDriver getWebDriver() {
         return webDriver;
     }
