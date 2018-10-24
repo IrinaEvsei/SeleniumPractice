@@ -4,32 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class BrowserManager {
-    private static BrowserManager browserManager = new BrowserManager();
     private static WebDriver webDriver;
-    private Properties properties;
-
-
-    public static BrowserManager getBrowserManager() {
-        return browserManager;
-    }
-
+    public String input;
     public static WebDriver getWebDriver() {
         return webDriver;
     }
 
-    private BrowserManager(){
-        properties = getProperties();
-        switch(properties.getProperty("browser")){
+    public BrowserManager(){
+        switch(input){
             case "Chrome":
                 System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\geckodriver.exe");
                 webDriver = new ChromeDriver();
@@ -46,18 +31,5 @@ public class BrowserManager {
                 break;
         }
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    Properties getProperties() {
-        try {
-            InputStream input = new FileInputStream("src\\test\\resources\\config.properties");
-            Properties props = new Properties();
-            props.load(input);
-            return props;
-        } catch (IOException e) {
-            Logger.getAnonymousLogger().log(Level.SEVERE, "Something goes wrong");
-            System.exit(-1);
-            return null;
-        }
     }
 }

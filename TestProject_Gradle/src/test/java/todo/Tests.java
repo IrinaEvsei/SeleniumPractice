@@ -7,7 +7,6 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import todo.BrowserManager;
 
 public class Tests {
     private WebDriver webDriver;
@@ -24,7 +23,7 @@ public class Tests {
 
         Thread.sleep(2000);
 
-        WebElement laptop = ((ChromeDriver) webDriver).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a/span/span");
+        WebElement laptop = ((ChromeDriver) webDriver).findElementByXPath("//span[@class='project-navigation__text']//span[contains(.,'Ноутбуки')]");
         laptop.click();
 
         WebElement laptopPageTitle = ((ChromeDriver) webDriver).findElementByClassName("schema-header__title");

@@ -17,11 +17,11 @@ public class MicrosoftEdgeTest {
         driverMicrosoftEdge.manage().window().maximize();
         driverMicrosoftEdge.get(PATH);
 
-        WebElement laptop = ((EdgeDriver) driverMicrosoftEdge).findElementByXPath("//*[@id=\"container\"]/div/div[2]/div/div/div[1]/div/div[1]/ul/li[2]/a");
+        WebElement laptop = ((EdgeDriver) driverMicrosoftEdge).findElementByXPath("//span[@class='project-navigation__text']//span[contains(.,'Ноутбуки')]");
         laptop.click();
 
         Thread.sleep(3000);
-        WebElement laptopPageTitle = ((EdgeDriver) driverMicrosoftEdge).findElementByClassName("schema-header__title");
+        WebElement laptopPageTitle = ((EdgeDriver) driverMicrosoftEdge).findElementByXPath("//h1[@class='schema-header__title']");
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
 
         driverMicrosoftEdge.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
