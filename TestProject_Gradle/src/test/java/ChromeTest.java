@@ -1,8 +1,11 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.security.Key;
 
 public class ChromeTest {
 
@@ -25,11 +28,15 @@ public class ChromeTest {
         //WebElement laptopPageTitle = (WebElement) ((ChromeDriver) driverChrome).findElementsByXPath("//h1[@class='schema-header__title']");
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
 
-//        WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
-//        searchField.sendKeys("asus vivobook pro 15");
+        WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
+        searchField.sendKeys("asus vivobook pro 15");
+        searchField.sendKeys(Keys.ESCAPE);
 
-        WebElement inputMinPrice = ((ChromeDriver) driverChrome).findElementByXPath("//input(contains[@data-bind, 'value:facet.value.from'])");
+        WebElement inputMinPrice = ((ChromeDriver) driverChrome).findElementByXPath("//*[@id=\"schema-filter\"]/div[1]/div[4]/div[2]/div/div[1]/input");
         inputMinPrice.sendKeys("1");
+
+        WebElement minPriceTag = ((ChromeDriver) driverChrome).findElementByXPath("//div[@id='schema-tags']//span[contains(., 'от 1')]");
+        Assert.assertTrue(String.valueOf(minPriceTag),true);
 
         Thread.sleep(2000);
 
