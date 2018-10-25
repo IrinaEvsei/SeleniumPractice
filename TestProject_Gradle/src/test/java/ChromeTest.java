@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.security.Key;
-
 public class ChromeTest {
 
     @Test
@@ -25,7 +23,6 @@ public class ChromeTest {
         laptop.click();
 
         WebElement laptopPageTitle = ((ChromeDriver) driverChrome).findElementByXPath("//h1[@class='schema-header__title']");
-        //WebElement laptopPageTitle = (WebElement) ((ChromeDriver) driverChrome).findElementsByXPath("//h1[@class='schema-header__title']");
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
 
         WebElement searchField = ((ChromeDriver) driverChrome).findElementByClassName("fast-search__input");
@@ -45,3 +42,7 @@ public class ChromeTest {
         driverChrome.quit();
     }
 }
+
+
+//xpath locator for the step1: "//div[@class='g-top-i']//span[contains(.,'Каталог')]" ---> catalog
+//step2: "//div[@class='catalog-navigation']//li[contains(@data-id, Random.rand.nextInt)]"
