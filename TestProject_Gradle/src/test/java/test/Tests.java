@@ -1,9 +1,8 @@
-package todo;
+package test;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,10 +14,8 @@ import org.testng.annotations.Parameters;
 import java.util.concurrent.TimeUnit;
 
 public class Tests {
-   // BrowserManager manager = new BrowserManager();
    public WebDriver driver;
    public String PATH = "https://www.onliner.by/";
-
 
     @BeforeTest
     @Parameters({"browser"})
@@ -39,18 +36,13 @@ public class Tests {
             throw new Exception("Browser is not correct");
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       //manager.initDriver();
     }
 
     @Test
-    public void test() throws InterruptedException {
+    public void test() throws Exception {
+        initDrivers("chrome");
         driver.get(PATH);
         driver.manage().window().maximize();
-
-        //WebDriver driver = manager.getWebDriver().manage().window().maximize();
-        //WebDriver driverChrome = new ChromeDriver();
-        //driverChrome.manage().window().maximize();
-        // driverChrome.get(PATH);
 
         Thread.sleep(2000);
 
@@ -59,10 +51,6 @@ public class Tests {
 
         WebElement laptopPageTitle = driver.findElement(By.xpath("//h1[@class='schema-header__title']"));
         Assert.assertEquals("Ноутбуки", laptopPageTitle.getText());
-
-        WebElement searchField = driver.findElement(By.xpath("fast-search__input"));
-        searchField.sendKeys("asus vivobook pro 15");
-        searchField.sendKeys(Keys.ESCAPE);
 
         WebElement inputMinPrice = driver.findElement(By.xpath("//*[@id=\"schema-filter\"]/div[1]/div[4]/div[2]/div/div[1]/input"));
         inputMinPrice.sendKeys("1");
@@ -74,6 +62,5 @@ public class Tests {
 
         System.out.println("Google Chrome Driver is work.");
         driver.close();
-        driver.quit();
     }
 }
