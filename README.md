@@ -8,3 +8,12 @@ Task 1
  - go to onliner.by -> laptops .
  The test must displayed something like click, enter a text, read the link (output to the log),
  4. The script should work in Chrome, FF, and IE (or Edge) browsers
+
+Task 2
+1. Open onliner.by
+2. Click [catalog]
+3. Select one random element from sub-menu
+4. Select one random sub-category
+5. Select the last visible item
+6. Set MIN price = 1
+7. out in log the name of the item, cost and number of shop
