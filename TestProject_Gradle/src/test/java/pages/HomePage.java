@@ -2,7 +2,6 @@ package pages;
 
 import elements.HomePageElements;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -36,7 +35,13 @@ public class HomePage {
     }
 
     public void clickOpenCatalog() {
-        WebElement element = driver.findElement(HomePageElements.OPEN_CATALOG);
-        element.click();
+        driver.findElement(HomePageElements.OPEN_CATALOG).click();
+        //WebElement element = driver.findElement(HomePageElements.OPEN_CATALOG);
+        //element.click();
+    }
+
+    public void driverClose(){
+        driver.close();
+        driver.quit();
     }
 }
