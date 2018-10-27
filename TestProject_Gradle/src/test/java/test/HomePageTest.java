@@ -7,8 +7,8 @@ import pages.CatalogPage;
 import pages.HomePage;
 
 public class HomePageTest {
-    HomePage homePage = new HomePage();
-    CatalogPage catalogPage = new CatalogPage();
+    private HomePage homePage = new HomePage();
+    private CatalogPage catalogPage = new CatalogPage();
 
     @Test
     @DisplayName("Open Catalog")
@@ -21,8 +21,9 @@ public class HomePageTest {
     // TO DO
     @Test
     @DisplayName("Select item in menu")
-    public void testCatalogPage(){
-        catalogPage.homePage();
+    public void testCatalogPage() {
+        //catalogPage.getHomePage();
+        catalogPage.catalogPageIsOpened();
         catalogPage.selectMenuItem();
     }
 

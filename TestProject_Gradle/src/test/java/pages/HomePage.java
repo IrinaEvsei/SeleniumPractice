@@ -9,7 +9,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
 public class HomePage {
-    WebDriver driver;
+    static WebDriver driver;
+
+    public HomePage() {
+        this.driver=driver;
+    }
 
     public void initDrivers(String browser) throws Exception{
         if(browser.equals("firefox")){
