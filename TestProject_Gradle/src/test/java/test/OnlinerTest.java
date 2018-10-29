@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.WebDriver;
+import pages.AudiointerfacePage;
 import pages.CatalogNavigationPage;
 import pages.CatalogPage;
 import pages.HomePage;
@@ -15,6 +16,7 @@ public class OnlinerTest {
     private HomePage homePage = new HomePage();
     private CatalogPage catalogPage = new CatalogPage();
     private CatalogNavigationPage catalogNavigationPage = new CatalogNavigationPage();
+    private AudiointerfacePage audiointerfacePage = new AudiointerfacePage();
 
     @Test
     @DisplayName("Open Catalog")
@@ -41,7 +43,20 @@ public class OnlinerTest {
         catalogNavigationPage.openCatalogNavigationPage();
         catalogNavigationPage.selectCatalogNavigationMenu();
         catalogNavigationPage.selectCatalogNavigationMenuItem();
-        catalogNavigationPage.audiointerfacePageIsOpened();
+    }
+
+    @Test
+    @DisplayName("Open audiointerface page and set min price in filter")
+    public void testAudiointerfacePAge(){
+        homePage.getHomePage();
+        catalogPage.openCatalogPage();
+        catalogNavigationPage.openCatalogNavigationPage();
+        catalogNavigationPage.selectCatalogNavigationMenu();
+        catalogNavigationPage.selectCatalogNavigationMenuItem();
+        audiointerfacePage.openAudiointerfacePage();
+        audiointerfacePage.audiointerfacePageIsOpened();
+        audiointerfacePage.audiointerfacePageSetMinPrice();
+        audiointerfacePage.audiointerfacePageCheckMinPriceTag();
     }
 
     @After
