@@ -1,14 +1,17 @@
 package pages;
 
+import driver.WebDriverSingleton;
 import elements.CatalogPageElements;
+import elements.HomePageElements;
 import org.openqa.selenium.WebDriver;
 
-public class CatalogPage extends HomePage{
-    WebDriver driver;
+public class CatalogPage {
+    WebDriver driver = WebDriverSingleton.getInstance();;
 
-//    public HomePage homePage(){
-//        return new HomePage();
-//    }
+    public HomePage openCatalogPage(){
+        driver.findElement(HomePageElements.OPEN_CATALOG).click();
+        return new HomePage(driver);
+    }
 
     public void catalogPageIsOpened(){
         driver.findElement(CatalogPageElements.CATALOG_TITLE);
