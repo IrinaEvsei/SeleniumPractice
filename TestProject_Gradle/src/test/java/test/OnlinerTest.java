@@ -1,17 +1,13 @@
 package test;
 
-import driver.WebDriverSingleton;
-import org.junit.After;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.openqa.selenium.WebDriver;
 import pages.AudiointerfacePage;
 import pages.CatalogNavigationPage;
 import pages.CatalogPage;
 import pages.HomePage;
 
-public class OnlinerTest {
-    private WebDriver driver = WebDriverSingleton.getInstance();
+public class OnlinerTest extends BaseTest {
 
     private HomePage homePage = new HomePage();
     private CatalogPage catalogPage = new CatalogPage();
@@ -57,11 +53,5 @@ public class OnlinerTest {
         audiointerfacePage.audiointerfacePageIsOpened();
         audiointerfacePage.audiointerfacePageSetMinPrice();
         audiointerfacePage.audiointerfacePageCheckMinPriceTag();
-    }
-
-    @After
-    public void shutDown() {
-        driver.close();
-        WebDriverSingleton.destroyInstance();
     }
 }
