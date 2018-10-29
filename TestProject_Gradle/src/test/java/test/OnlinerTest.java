@@ -47,7 +47,7 @@ public class OnlinerTest {
 
     @Test
     @DisplayName("Open audiointerface page and set min price in filter")
-    public void testAudiointerfacePAge(){
+    public void testAudiointerfacePage(){
         homePage.getHomePage();
         catalogPage.openCatalogPage();
         catalogNavigationPage.openCatalogNavigationPage();
