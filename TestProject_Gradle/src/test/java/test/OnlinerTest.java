@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.WebDriver;
+import pages.CatalogNavigationPage;
 import pages.CatalogPage;
 import pages.HomePage;
 
@@ -13,6 +14,7 @@ public class OnlinerTest {
 
     private HomePage homePage = new HomePage();
     private CatalogPage catalogPage = new CatalogPage();
+    private CatalogNavigationPage catalogNavigationPage = new CatalogNavigationPage();
 
     @Test
     @DisplayName("Open Catalog")
@@ -29,6 +31,17 @@ public class OnlinerTest {
         catalogPage.openCatalogPage();
         catalogPage.catalogPageIsOpened();
         catalogPage.selectMenuItem();
+    }
+
+    @Test
+    @DisplayName("Open navigation menu and select the item")
+    public void testCatalogNavigationMenuPage(){
+        homePage.getHomePage();
+        catalogPage.openCatalogPage();
+        catalogNavigationPage.openCatalogNavigationPage();
+        catalogNavigationPage.selectCatalogNavigationMenu();
+        catalogNavigationPage.selectCatalogNavigationMenuItem();
+        catalogNavigationPage.audiointerfacePageIsOpened();
     }
 
     @After
