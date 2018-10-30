@@ -16,4 +16,3 @@ Task 2
 4. Select one random sub-category
 5. Select the last visible item
 6. Set MIN price = 1
-7. out in log the name of the item, cost and number of shop
