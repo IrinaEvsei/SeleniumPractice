@@ -19,13 +19,13 @@ public class AudiointerfacePage {
         Assert.assertTrue(true);
     }
 
-    public void audiointerfacePageSetMinPrice(){
-        //driver.findElement(AudiointerfacePageElements.AUDIOINTERFACE_MIN_PRICE).click();
-        driver.findElement(AudiointerfacePageElements.AUDIOINTERFACE_MIN_PRICE).sendKeys("1");
+    public void audiointerfacePageSetMinPrice(String minPrice){
+        driver.findElement(AudiointerfacePageElements.AUDIOINTERFACE_MIN_PRICE).sendKeys(minPrice);
     }
 
     public void audiointerfacePageCheckMinPriceTag(){
         driver.findElement(AudiointerfacePageElements.MIN_PRICE_TAG);
         Assert.assertTrue(true);
     }
+
 }

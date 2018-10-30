@@ -2,19 +2,15 @@ package pages;
 
 import driver.WebDriverSingleton;
 import elements.CatalogPageElements;
-import elements.HomePageElements;
 import org.openqa.selenium.WebDriver;
 
 public class CatalogPage {
     WebDriver driver = WebDriverSingleton.getInstance();
 
-    public CatalogPage(WebDriver driver) { this.driver = driver; }
-
     public CatalogPage(){}
 
-    public HomePage openCatalogPage(){
-        driver.findElement(HomePageElements.OPEN_CATALOG).click();
-        return new HomePage(driver);
+    public void openCatalogPage(){
+        driver.get(CatalogPageElements.URL);
     }
 
     public void catalogPageIsOpened(){

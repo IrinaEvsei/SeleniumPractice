@@ -12,9 +12,8 @@ public class CatalogNavigationPage {
 
     public CatalogNavigationPage() {}
 
-    public CatalogPage openCatalogNavigationPage(){
+    public void openCatalogNavigationPage(){
         driver.findElement(CatalogPageElements.MENU_ITEM).click();
-        return new CatalogPage(driver);
     }
 
     public void selectCatalogNavigationMenu(){

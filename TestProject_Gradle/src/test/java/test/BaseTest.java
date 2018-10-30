@@ -22,6 +22,8 @@ public class BaseTest {
     @AfterTest(description = "Stop browser")
     public void shutDown() {
         driver.close();
+        driver.quit();
         WebDriverSingleton.destroyInstance();
     }
+
 }

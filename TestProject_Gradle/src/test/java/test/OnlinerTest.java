@@ -17,7 +17,6 @@ public class OnlinerTest extends BaseTest {
     @Test
     @DisplayName("Open Catalog")
     public void testHomePage() {
-        //homePage.initDrivers("chrome");
         homePage.getHomePage();
         homePage.clickOpenCatalog();
     }
@@ -51,7 +50,8 @@ public class OnlinerTest extends BaseTest {
         catalogNavigationPage.selectCatalogNavigationMenuItem();
         audiointerfacePage.openAudiointerfacePage();
         audiointerfacePage.audiointerfacePageIsOpened();
-        audiointerfacePage.audiointerfacePageSetMinPrice();
+        audiointerfacePage.audiointerfacePageSetMinPrice("1");
         audiointerfacePage.audiointerfacePageCheckMinPriceTag();
+
     }
 }
