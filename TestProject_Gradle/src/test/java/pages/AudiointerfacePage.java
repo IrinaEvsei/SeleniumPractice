@@ -2,19 +2,22 @@ package pages;
 
 import driver.WebDriverSingleton;
 import elements.AudiointerfacePageElements;
-import elements.CatalogNavigationPageElements;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-public class AudiointerfacePage extends AudiointerfacePageElements {
+import static elements.CatalogNavigationPageElements.cataaudiointerfacePageTitle;
+
+public class AudiointerfacePage extends AudiointerfacePageElements{
     WebDriver driver = WebDriverSingleton.getInstance();
 
     public void openAudiointerfacePage() {
-        driver.findElement(CatalogNavigationPageElements.AUDIOINTERFACE_PAGE_TITLE).click();
+
+        //driver.findElement(CatalogNavigationPageElements.AUDIOINTERFACE_PAGE_TITLE).click();
     }
 
     public void audiointerfacePageIsOpened(){
-        driver.findElement(CatalogNavigationPageElements.AUDIOINTERFACE_PAGE_TITLE);
+        cataaudiointerfacePageTitle.getText();
+        //driver.findElement(CatalogNavigationPageElements.AUDIOINTERFACE_PAGE_TITLE);
         Assert.assertTrue(true);
     }
 
@@ -24,15 +27,16 @@ public class AudiointerfacePage extends AudiointerfacePageElements {
     }
 
     public void audiointerfacePageCheckMinPriceTag(){
-        driver.findElement(AudiointerfacePageElements.MIN_PRICE_TAG);
-        Assert.assertTrue(true);
+        Assert.assertTrue(String.valueOf(audiointerfaceMinPriceTag), true);
+        //driver.findElement(AudiointerfacePageElements.MIN_PRICE_TAG);
+        //Assert.assertTrue(true);
     }
 
     public void audiointerfacePageCheckNegativeMinPrice (String negativeMinPrice){
         audiointerfaceMinPrice.sendKeys(negativeMinPrice);
     }
 
-    public void audiointerfacePageCheckWarningMessage (){
-        warningMessage.getText();
-    }
+//    public void audiointerfacePageCheckWarningMessage (){
+//        warningMessage.getText();
+//    }
 }
