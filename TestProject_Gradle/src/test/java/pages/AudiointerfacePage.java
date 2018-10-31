@@ -6,7 +6,7 @@ import elements.CatalogNavigationPageElements;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-public class AudiointerfacePage {
+public class AudiointerfacePage extends AudiointerfacePageElements {
     WebDriver driver = WebDriverSingleton.getInstance();
 
     public void openAudiointerfacePage() {
@@ -19,7 +19,8 @@ public class AudiointerfacePage {
     }
 
     public void audiointerfacePageSetMinPrice(String minPrice){
-        driver.findElement(AudiointerfacePageElements.AUDIOINTERFACE_MIN_PRICE).sendKeys(minPrice);
+        audiointerfaceMinPrice.sendKeys(minPrice);
+//        driver.findElement(AudiointerfacePageElements.AUDIOINTERFACE_MIN_PRICE).sendKeys(minPrice);
     }
 
     public void audiointerfacePageCheckMinPriceTag(){
@@ -27,4 +28,11 @@ public class AudiointerfacePage {
         Assert.assertTrue(true);
     }
 
+    public void audiointerfacePageCheckNegativeMinPrice (String negativeMinPrice){
+        audiointerfaceMinPrice.sendKeys(negativeMinPrice);
+    }
+
+    public void audiointerfacePageCheckWarningMessage (){
+        warningMessage.getText();
+    }
 }
