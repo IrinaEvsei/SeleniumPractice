@@ -9,9 +9,8 @@ import org.openqa.selenium.WebDriver;
 public class AudiointerfacePage {
     WebDriver driver = WebDriverSingleton.getInstance();
 
-    public CatalogNavigationPage openAudiointerfacePage(){
+    public void openAudiointerfacePage() {
         driver.findElement(CatalogNavigationPageElements.AUDIOINTERFACE_PAGE_TITLE).click();
-        return new CatalogNavigationPage(driver);
     }
 
     public void audiointerfacePageIsOpened(){
