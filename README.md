@@ -16,3 +16,11 @@ Task 2
 4. Select one random sub-category
 5. Select the last visible item
 6. Set MIN price = 1
+
+Task3
+Need to create an autotest:
+1. GET https://swapi.co/api/
+2. Select random element, for example "planets": "https://swapi.co/api/planets/",
+3. GET https://swapi.co/api/planets/
+4. It's necessary to check that the count is correctly calculated
+https://monosnap.com/file/d7nN9gVqdVkMTDpRmknywv1qhHs4Cx
