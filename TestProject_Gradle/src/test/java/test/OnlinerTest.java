@@ -25,9 +25,9 @@ public class OnlinerTest extends BaseTest {
     public void testHomePage() {
         log.debug("open website");
         homePage.getHomePage();
-        log.debug("getHomePage");
+        log.debug("Home Page");
         homePage.clickOpenCatalog();
-        log.debug("clickOpenCatalog");
+        log.debug("Catalog page is opened");
     }
 
     @Test
