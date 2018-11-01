@@ -30,7 +30,7 @@ public class AudiointerfacePage {
         driver.findElement(AudiointerfacePageElements.MIN_PRICE_TAG);
         Assert.assertTrue(true);
     }
-    
+
     public void audiointerfacePageCheckNegativeMinPriceWarning (){
         driver.findElement(AudiointerfacePageElements.WARNING_MESSAGE).getText();
         Assert.assertTrue(true);
