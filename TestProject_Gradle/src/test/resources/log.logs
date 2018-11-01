@@ -1,3 +1,6 @@
-15:58:03,438 DEBUG devpinoyLogger<strong>{1}</strong>:26 - open website
-15:58:05,328 DEBUG devpinoyLogger<strong>{1}</strong>:28 - Home Page
-15:58:07,059 DEBUG devpinoyLogger<strong>{1}</strong>:30 - Catalog page is opened
+16:17:01,392 DEBUG devpinoyLogger<strong>{1}</strong>:50 - open website
+16:17:03,477 DEBUG devpinoyLogger<strong>{1}</strong>:52 - Home Page
+16:17:05,086 DEBUG devpinoyLogger<strong>{1}</strong>:54 - Catalog page is opened
+16:17:05,569 DEBUG devpinoyLogger<strong>{1}</strong>:56 - Catalog Navigation menu is opened
+16:17:05,848 DEBUG devpinoyLogger<strong>{1}</strong>:58 - Selectes item in navigation menu
+16:17:08,084 DEBUG devpinoyLogger<strong>{1}</strong>:60 - Selectes item in navigation sub-menu

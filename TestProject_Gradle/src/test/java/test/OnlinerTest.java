@@ -33,20 +33,31 @@ public class OnlinerTest extends BaseTest {
     @Test
     @DisplayName("Select item in menu")
     public void testCatalogPage() {
+        log.debug("open website");
         homePage.getHomePage();
+        log.debug("Home Page");
         catalogPage.openCatalogPage();
+        log.debug("Catalog page is opened");
         catalogPage.catalogPageIsOpened();
+        log.debug("Сheck that Catalog page is opened");
         catalogPage.selectMenuItem();
+        log.debug("Select an item in a menu on Catalog page");
     }
 
     @Test
     @DisplayName("Open navigation menu and select the item")
     public void testCatalogNavigationMenuPage(){
+        log.debug("open website");
         homePage.getHomePage();
+        log.debug("Home Page");
         catalogPage.openCatalogPage();
+        log.debug("Catalog page is opened");
         catalogNavigationPage.openCatalogNavigationPage();
+        log.debug("Catalog Navigation menu is opened");
         catalogNavigationPage.selectCatalogNavigationMenu();
+        log.debug("Selectes item in navigation menu");
         catalogNavigationPage.selectCatalogNavigationMenuItem();
+        log.debug("Selectes item in navigation sub-menu");
     }
 
     @Test
