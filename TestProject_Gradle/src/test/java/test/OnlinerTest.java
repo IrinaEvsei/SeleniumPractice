@@ -18,22 +18,24 @@ public class OnlinerTest extends BaseTest {
     private CatalogPage catalogPage = new CatalogPage();
     private CatalogNavigationPage catalogNavigationPage = new CatalogNavigationPage();
     private AudiointerfacePage audiointerfacePage = new AudiointerfacePage();
-    Logger log = Logger.getLogger("devpinoyLogger");
+    private Logger log = Logger.getLogger("devpinoyLogger");
 
     @Test
     @DisplayName("Open Catalog")
     public void testHomePage() {
-        log.debug("open website");
+        log.debug("open browser");
         homePage.getHomePage();
         log.debug("Home Page");
         homePage.clickOpenCatalog();
         log.debug("Catalog page is opened");
+
+        log.debug("\nTest1 is end");
     }
 
     @Test
     @DisplayName("Select item in menu")
     public void testCatalogPage() {
-        log.debug("open website");
+        log.debug("open browser");
         homePage.getHomePage();
         log.debug("Home Page");
         catalogPage.openCatalogPage();
@@ -42,12 +44,14 @@ public class OnlinerTest extends BaseTest {
         log.debug("Сheck that Catalog page is opened");
         catalogPage.selectMenuItem();
         log.debug("Select an item in a menu on Catalog page");
+
+        log.debug("\nTest2 is end");
     }
 
     @Test
     @DisplayName("Open navigation menu and select the item")
     public void testCatalogNavigationMenuPage(){
-        log.debug("open website");
+        log.debug("open browser");
         homePage.getHomePage();
         log.debug("Home Page");
         catalogPage.openCatalogPage();
@@ -55,38 +59,62 @@ public class OnlinerTest extends BaseTest {
         catalogNavigationPage.openCatalogNavigationPage();
         log.debug("Catalog Navigation menu is opened");
         catalogNavigationPage.selectCatalogNavigationMenu();
-        log.debug("Selectes item in navigation menu");
+        log.debug("Selected item in navigation menu");
         catalogNavigationPage.selectCatalogNavigationMenuItem();
-        log.debug("Selectes item in navigation sub-menu");
+        log.debug("Selected item in navigation sub-menu");
+
+        log.debug("\nTest3 is end");
     }
 
     @Test
     @DisplayName("Open audiointerface page and set min price in filter")
     public void testAudiointerfacePage(){
+        log.debug("open browser");
         homePage.getHomePage();
+        log.debug("Home Page");
         catalogPage.openCatalogPage();
+        log.debug("Catalog page is opened");
         catalogNavigationPage.openCatalogNavigationPage();
+        log.debug("Catalog Navigation menu is opened");
         catalogNavigationPage.selectCatalogNavigationMenu();
+        log.debug("Selected item in navigation menu");
         catalogNavigationPage.selectCatalogNavigationMenuItem();
+        log.debug("Selected item in navigation sub-menu");
         audiointerfacePage.openAudiointerfacePage();
+        log.debug("Audiointerface page is opened");
         audiointerfacePage.audiointerfacePageIsOpened();
+        log.debug("Сheck that Audiointerface page is opened");
         audiointerfacePage.audiointerfacePageSetMinPrice(MIN_PRICE);
+        log.debug("Set min price = 1");
         audiointerfacePage.audiointerfacePageCheckMinPriceTag();
 
+        log.debug("\nTest4 is end");
     }
 
     @Test
     @DisplayName("Open audiointerface page and set min price in filter")
     public void testNegativePriceAudiointerfacePage(){
+        log.debug("open browser");
         homePage.getHomePage();
+        log.debug("Home Page");
         catalogPage.openCatalogPage();
+        log.debug("Catalog page is opened");
         catalogNavigationPage.openCatalogNavigationPage();
+        log.debug("Catalog Navigation menu is opened");
         catalogNavigationPage.selectCatalogNavigationMenu();
+        log.debug("Selected item in navigation menu");
         catalogNavigationPage.selectCatalogNavigationMenuItem();
+        log.debug("Selected item in navigation sub-menu");
         audiointerfacePage.openAudiointerfacePage();
+        log.debug("Audiointerface page is opened");
         audiointerfacePage.audiointerfacePageIsOpened();
+        log.debug("Сheck that Audiointerface page is opened");
         audiointerfacePage.audiointerfacePageSetMinPrice(NEGATIVE_PRICE);
+        log.debug("Set min price = -1");
         audiointerfacePage.audiointerfacePageCheckNegativeMinPriceWarning();
+        log.debug("Check warning message");
+
+        log.debug("\nTest5 is end");
     }
 
 }
