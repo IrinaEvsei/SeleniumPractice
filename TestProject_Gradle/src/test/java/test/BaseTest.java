@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    protected static WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeTest
     public void openPage(){
@@ -19,7 +19,7 @@ public class BaseTest {
         }
     }
 
-    @AfterTest(description = "Stop browser")
+    @AfterTest
     public void shutDown() {
         driver.close();
         driver.quit();

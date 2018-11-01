@@ -1,5 +1,6 @@
 package test;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import pages.AudiointerfacePage;
@@ -17,12 +18,16 @@ public class OnlinerTest extends BaseTest {
     private CatalogPage catalogPage = new CatalogPage();
     private CatalogNavigationPage catalogNavigationPage = new CatalogNavigationPage();
     private AudiointerfacePage audiointerfacePage = new AudiointerfacePage();
+    Logger log = Logger.getLogger("devpinoyLogger");
 
     @Test
     @DisplayName("Open Catalog")
     public void testHomePage() {
+        log.debug("open website");
         homePage.getHomePage();
+        log.debug("getHomePage");
         homePage.clickOpenCatalog();
+        log.debug("clickOpenCatalog");
     }
 
     @Test
