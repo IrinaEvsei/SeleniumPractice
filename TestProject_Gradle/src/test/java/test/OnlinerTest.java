@@ -11,6 +11,7 @@ public class OnlinerTest extends BaseTest {
 
     private static final String MIN_PRICE = "1";
     private static final String NEGATIVE_PRICE = "-1";
+    private static final String WARNING = "Что-то пошло не так, и товары не удалось отобразить.Повторите попытку позже.";
 
     private HomePage homePage = new HomePage();
     private CatalogPage catalogPage = new CatalogPage();
@@ -58,17 +59,18 @@ public class OnlinerTest extends BaseTest {
 
     }
 
-//    @Test
-//    @DisplayName("Open audiointerface page and set min price in filter")
-//    public void testNegativePriceAudiointerfacePage(){
-//        homePage.getHomePage();
-//        catalogPage.openCatalogPage();
-//        catalogNavigationPage.openCatalogNavigationPage();
-//        catalogNavigationPage.selectCatalogNavigationMenu();
-//        catalogNavigationPage.selectCatalogNavigationMenuItem();
-//        audiointerfacePage.openAudiointerfacePage();
-//        audiointerfacePage.audiointerfacePageIsOpened();
-//        audiointerfacePage.audiointerfacePageCheckNegativeMinPrice(NEGATIVE_PRICE);
-//        audiointerfacePage.audiointerfacePageCheckWarningMessage();
-//    }
+    @Test
+    @DisplayName("Open audiointerface page and set min price in filter")
+    public void testNegativePriceAudiointerfacePage(){
+        homePage.getHomePage();
+        catalogPage.openCatalogPage();
+        catalogNavigationPage.openCatalogNavigationPage();
+        catalogNavigationPage.selectCatalogNavigationMenu();
+        catalogNavigationPage.selectCatalogNavigationMenuItem();
+        audiointerfacePage.openAudiointerfacePage();
+        audiointerfacePage.audiointerfacePageIsOpened();
+        audiointerfacePage.audiointerfacePageSetMinPrice(NEGATIVE_PRICE);
+        audiointerfacePage.audiointerfacePageCheckNegativeMinPriceWarning();
+    }
+
 }
