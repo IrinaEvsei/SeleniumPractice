@@ -1,43 +1,5 @@
-16:27:42,889 DEBUG devpinoyLogger<strong>{1}</strong>:38 - open browser
-16:27:45,057 DEBUG devpinoyLogger<strong>{1}</strong>:40 - Home Page
-16:27:46,645 DEBUG devpinoyLogger<strong>{1}</strong>:42 - Catalog page is opened
-16:27:46,675 DEBUG devpinoyLogger<strong>{1}</strong>:44 - Сheck that Catalog page is opened
-16:27:47,366 DEBUG devpinoyLogger<strong>{1}</strong>:46 - Select an item in a menu on Catalog page
-16:27:47,367 DEBUG devpinoyLogger<strong>{1}</strong>:48 - 
-Test2 is end
-16:27:47,368 DEBUG devpinoyLogger<strong>{1}</strong>:72 - open browser
-16:27:49,227 DEBUG devpinoyLogger<strong>{1}</strong>:74 - Home Page
-16:27:50,747 DEBUG devpinoyLogger<strong>{1}</strong>:76 - Catalog page is opened
-16:27:51,209 DEBUG devpinoyLogger<strong>{1}</strong>:78 - Catalog Navigation menu is opened
-16:27:51,516 DEBUG devpinoyLogger<strong>{1}</strong>:80 - Selected item in navigation menu
-16:27:53,805 DEBUG devpinoyLogger<strong>{1}</strong>:82 - Selected item in navigation sub-menu
-16:27:53,883 DEBUG devpinoyLogger<strong>{1}</strong>:84 - Audiointerface page is opened
-16:27:53,898 DEBUG devpinoyLogger<strong>{1}</strong>:86 - Сheck that Audiointerface page is opened
-16:27:53,978 DEBUG devpinoyLogger<strong>{1}</strong>:88 - Set min price = 1
-16:27:54,008 DEBUG devpinoyLogger<strong>{1}</strong>:91 - 
-Test4 is end
-16:27:54,009 DEBUG devpinoyLogger<strong>{1}</strong>:26 - open browser
-16:27:55,474 DEBUG devpinoyLogger<strong>{1}</strong>:28 - Home Page
-16:27:56,945 DEBUG devpinoyLogger<strong>{1}</strong>:30 - Catalog page is opened
-16:27:56,945 DEBUG devpinoyLogger<strong>{1}</strong>:32 - 
+17:16:55,711 DEBUG logger.Log<strong>{1}</strong>:34 - open browser
+17:16:58,058 DEBUG logger.Log<strong>{1}</strong>:34 - Home Page
+17:16:59,828 DEBUG logger.Log<strong>{1}</strong>:34 - Catalog page is opened
+17:16:59,829 DEBUG logger.Log<strong>{1}</strong>:34 - 
 Test1 is end
-16:27:56,946 DEBUG devpinoyLogger<strong>{1}</strong>:54 - open browser
-16:27:58,224 DEBUG devpinoyLogger<strong>{1}</strong>:56 - Home Page
-16:27:59,456 DEBUG devpinoyLogger<strong>{1}</strong>:58 - Catalog page is opened
-16:27:59,910 DEBUG devpinoyLogger<strong>{1}</strong>:60 - Catalog Navigation menu is opened
-16:28:00,235 DEBUG devpinoyLogger<strong>{1}</strong>:62 - Selected item in navigation menu
-16:28:02,358 DEBUG devpinoyLogger<strong>{1}</strong>:64 - Selected item in navigation sub-menu
-16:28:02,358 DEBUG devpinoyLogger<strong>{1}</strong>:66 - 
-Test3 is end
-16:28:02,359 DEBUG devpinoyLogger<strong>{1}</strong>:97 - open browser
-16:28:03,772 DEBUG devpinoyLogger<strong>{1}</strong>:99 - Home Page
-16:28:06,679 DEBUG devpinoyLogger<strong>{1}</strong>:101 - Catalog page is opened
-16:28:07,245 DEBUG devpinoyLogger<strong>{1}</strong>:103 - Catalog Navigation menu is opened
-16:28:07,540 DEBUG devpinoyLogger<strong>{1}</strong>:105 - Selected item in navigation menu
-16:28:10,072 DEBUG devpinoyLogger<strong>{1}</strong>:107 - Selected item in navigation sub-menu
-16:28:10,161 DEBUG devpinoyLogger<strong>{1}</strong>:109 - Audiointerface page is opened
-16:28:10,175 DEBUG devpinoyLogger<strong>{1}</strong>:111 - Сheck that Audiointerface page is opened
-16:28:10,278 DEBUG devpinoyLogger<strong>{1}</strong>:113 - Set min price = -1
-16:28:10,644 DEBUG devpinoyLogger<strong>{1}</strong>:115 - Check warning message
-16:28:10,645 DEBUG devpinoyLogger<strong>{1}</strong>:117 - 
-Test5 is end

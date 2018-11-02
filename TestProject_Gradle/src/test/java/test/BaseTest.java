@@ -1,6 +1,7 @@
 package test;
 
 import driver.WebDriverSingleton;
+import logger.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -12,6 +13,7 @@ public class BaseTest {
 
     @BeforeTest
     public void openPage(){
+        Log.startLog("Driver != null. Testing is starting!");
         if (driver == null){
             driver = WebDriverSingleton.getInstance();
             driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
@@ -21,6 +23,7 @@ public class BaseTest {
 
     @AfterTest
     public void shutDown() {
+        Log.endLog("Testing is ending!");
         driver.close();
         driver.quit();
         WebDriverSingleton.destroyInstance();
