@@ -18,7 +18,7 @@ public class OnlinerTest extends BaseTest {
     private CatalogPage catalogPage = new CatalogPage();
     private CatalogNavigationPage catalogNavigationPage = new CatalogNavigationPage();
     private AudiointerfacePage audiointerfacePage = new AudiointerfacePage();
-    private Logger log = Logger.getLogger("devpinoyLogger");
+    private Logger log = Logger.getLogger("Logger");
 
     @Test
     @DisplayName("Open Catalog")
