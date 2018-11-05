@@ -84,7 +84,7 @@ public class OnlinerTest extends BaseTest {
         Log.debug("Audiointerface page is opened");
         audiointerfacePage.audiointerfacePageIsOpened();
         Log.debug("Сheck that Audiointerface page is opened");
-        audiointerfacePage.audiointerfacePageSetMinPrice(MIN_PRICE);
+        audiointerfacePage.audiointerfacePageSetMinPrice(MIN_PRICE); //???
         Log.debug("Set min price = 1");
         audiointerfacePage.audiointerfacePageCheckMinPriceTag();
 

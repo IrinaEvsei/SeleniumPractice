@@ -20,7 +20,7 @@ public class CatalogNavigationPage{
     }
 
     public void selectCatalogNavigationMenu(){
-//        catalogNvigationList.click();
+//        catalogNavigationList.click();
         driver.findElement(CatalogNavigationPageElements.CATALOG_NAVIGATION_LIST).click();
     }
 
