@@ -33,6 +33,18 @@ public class APItest {
             Assert.assertTrue(valueToCheck.contains("planets"));
     }
 
+    @Test
+    public void planetsTest() {
+        driver.get(baseUrl);
+        WebElement elm = driver.findElement(By.xpath("//a[contains(., 'planets')]"));
+        elm.click();
+        driver.navigate().to(baseUrl+"?format=json");
+        WebElement elem = driver.findElement(By.xpath("//pre[contains(., '/planets/')]"));
+        JSONObject jsonObject = new JSONObject(elem.getText());
+        String valueToCheck = jsonObject.toString();
+        Assert.assertTrue(valueToCheck.contains("planets"));
+    }
+
     @After
     public void tearDown() {
         WebDriverSingleton.destroyInstance();
