@@ -1,19 +1,22 @@
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import driver.WebDriverSingleton;
+import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
 
 public class APItest {
-    public static WebDriver driver;
+    private static WebDriver driver;
     private String baseUrl;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         driver = WebDriverSingleton.getInstance();
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -21,17 +24,13 @@ public class APItest {
     }
 
     @Test
-    public void aptTesting() throws Exception {
-            URL url = new URL(baseUrl);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setRequestProperty("Accept", "application/json");
-            if (conn.getResponseCode() != 200) {
-                throw new RuntimeException("HTTP error code : " + conn.getResponseCode());
-            }
-            else {
-                System.out.println("OK");
-            }
+    public void apiTesting() {
+            driver.get(baseUrl);
+            driver.navigate().to(baseUrl+"?format=json");
+            WebElement element = driver.findElement(By.xpath("//pre"));
+            JSONObject jsonObject = new JSONObject(element.getText());
+            String valueToCheck = jsonObject.toString();
+            Assert.assertTrue(valueToCheck.contains("planets"));
     }
 
     @After
