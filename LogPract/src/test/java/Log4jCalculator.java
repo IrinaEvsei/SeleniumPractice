@@ -35,10 +35,10 @@ public class Log4jCalculator {
 
         driver.manage().window().maximize();
 
-        driver.findElement(By.xpath("/html/body/div[4]/div/table/tbody/tr/td[3]/div[2]/a")).click();
+        driver.findElement(By.xpath("//div[@class='hh']/a[contains(.,'Math Calculators')]")).click();
         logger.info("Clicked Math Calculator Link");
 
-        driver.findElement(By.xpath("/html/body/div[3]/div[1]/table[2]/tbody/tr/td/div[3]/a")).click();
+        driver.findElement(By.xpath("//td[@class='sectionlists']//a[contains(.,'Percentage')]")).click();
         logger.info("Clicked Percent Calculator Link");
 
         driver.findElement(By.id("cpar1")).sendKeys("10");
@@ -47,10 +47,10 @@ public class Log4jCalculator {
         driver.findElement(By.id("cpar2")).sendKeys("50");
         logger.info("Entered Value into Second Text Box");
 
-        driver.findElement(By.xpath("/html/body/div[3]/div[1]/table[1]/tbody/tr[2]/td/input[2]")).click();
+        driver.findElement(By.xpath("/html/body/div[3]/div[1]/table[1]/tbody/tr[2]/td/input[2]")).click(); //???
         logger.info("Click Calculate Button");
 
-        String result = driver.findElement(By.xpath("/html/body/div[3]/div[1]/p[2]/font/b")).getText();
+        String result = driver.findElement(By.xpath("/html/body/div[3]/div[1]/p[2]/font/b")).getText(); //???
         logger.info("Get Text Value");
 
         logger.info(" The Result is " + result);
