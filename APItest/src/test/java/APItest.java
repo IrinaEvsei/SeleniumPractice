@@ -45,6 +45,15 @@ public class APItest {
         Assert.assertTrue(valueToCheck.contains("planets"));
     }
 
+    @Test
+    public void countTest() {
+        driver.get(baseUrl);
+        WebElement elm = driver.findElement(By.xpath("//a[contains(., 'planets')]"));
+        elm.click();
+        WebElement tagCount = driver.findElement(By.xpath("//span[@class='str' and contains(., 'count')]"));
+
+    }
+
     @After
     public void tearDown() {
         WebDriverSingleton.destroyInstance();
