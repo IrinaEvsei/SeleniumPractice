@@ -1,0 +1,46 @@
+2018-11-12 12:09:36  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:09:36  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:09:42  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:20:17  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:20:17  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:20:23  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:22:22  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:22:22  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:22:27  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:22:32  [Log4jCalculator] (main:) Clicked Math Calculator Link
+2018-11-12 12:28:54  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:28:54  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:29:00  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:29:05  [Log4jCalculator] (main:) Clicked Math Calculator Link
+2018-11-12 12:29:06  [Log4jCalculator] (main:) Clicked Percent Calculator Link
+2018-11-12 12:29:06  [Log4jCalculator] (main:) Entered Value into First Text Box
+2018-11-12 12:29:06  [Log4jCalculator] (main:) Entered Value into Second Text Box
+2018-11-12 12:29:07  [Log4jCalculator] (main:) Click Calculate Button
+2018-11-12 12:29:07  [Log4jCalculator] (main:) Get Text Value
+2018-11-12 12:29:07  [Log4jCalculator] (main:)  The Result is 5
+2018-11-12 12:29:07  [Log4jCalculator] (main:) The Result is Pass
+2018-11-12 12:29:07  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:29:48  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:29:48  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:29:53  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:29:58  [Log4jCalculator] (main:) Clicked Math Calculator Link
+2018-11-12 12:29:59  [Log4jCalculator] (main:) Clicked Percent Calculator Link
+2018-11-12 12:29:59  [Log4jCalculator] (main:) Entered Value into First Text Box
+2018-11-12 12:29:59  [Log4jCalculator] (main:) Entered Value into Second Text Box
+2018-11-12 12:30:01  [Log4jCalculator] (main:) Click Calculate Button
+2018-11-12 12:30:01  [Log4jCalculator] (main:) Get Text Value
+2018-11-12 12:30:01  [Log4jCalculator] (main:)  The Result is 5
+2018-11-12 12:30:01  [Log4jCalculator] (main:) The Result is Pass
+2018-11-12 12:30:01  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # #
+2018-11-12 12:34:54  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+2018-11-12 12:34:54  [Log4jCalculator] (main:) TEST Has Started
+2018-11-12 12:34:57  [Log4jCalculator] (main:) Open Calc Application
+2018-11-12 12:35:01  [Log4jCalculator] (main:) Clicked Math Calculator Link
+2018-11-12 12:35:02  [Log4jCalculator] (main:) Clicked Percent Calculator Link
+2018-11-12 12:35:03  [Log4jCalculator] (main:) Entered Value into First Text Box
+2018-11-12 12:35:03  [Log4jCalculator] (main:) Entered Value into Second Text Box
+2018-11-12 12:35:03  [Log4jCalculator] (main:) Click Calculate Button
+2018-11-12 12:35:03  [Log4jCalculator] (main:) Get Text Value
+2018-11-12 12:35:03  [Log4jCalculator] (main:)  The Result is 5
+2018-11-12 12:35:03  [Log4jCalculator] (main:) The Result is Pass
+2018-11-12 12:35:03  [Log4jCalculator] (main:) # # # # # # # # # # # # # # # # # # # # # # # # # # # 
