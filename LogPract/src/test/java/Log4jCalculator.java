@@ -20,7 +20,8 @@ public class Log4jCalculator {
             driver = WebDriverSingleton.getInstance();
             driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-        }    }
+        }
+    }
     @Test
     public void main() {
 
